@@ -3,7 +3,7 @@ import { ISchemaService, SchemaConfig, SchemaFieldConfig, SchemaFieldType } from
 
 export class PostgresSchemaService implements ISchemaService {
 	public generate(config: SchemaConfig): string {
-		let text: string = `CREATE TABLE IF NOT EXISTS ds_${config.name}`;
+		let text: string = `CREATE TABLE IF NOT EXISTS ds_${config.name} (`;
 
 		config.fields.forEach((field: SchemaFieldConfig, index: number) => {
 			text += `${field.name} ${this.getFieldType(field.type)}`;
@@ -20,7 +20,7 @@ export class PostgresSchemaService implements ISchemaService {
 				return 'SERIAL PRIMARY KEY';
 			}
 			case SchemaFieldType.STRING: {
-				return 'varchar(100)';
+				return 'VARCHAR(100)';
 			}
 		}
 	}

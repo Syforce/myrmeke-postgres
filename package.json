@@ -12,7 +12,7 @@
 		"build": "tsc"
 	},
 	"dependencies": {
-		"myrmeke-colony": "0.0.17",
+		"myrmeke-colony": "0.0.19",
 		"pg": "^7.11.0"
 	},
 	"devDependencies": {
