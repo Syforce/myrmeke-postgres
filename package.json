@@ -1,0 +1,22 @@
+{
+	"name": "myrmeke-postgres",
+	"version": "0.0.1",
+	"description": "Myrmeke Postgres is the base for a standard usage of the Postgres database",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"private": false,
+	"repository": {},
+	"author": "Syforce Lightningstorm",
+	"license": "ISC",
+	"scripts": {
+		"build": "tsc"
+	},
+	"dependencies": {
+		"myrmeke-colony": "0.0.17",
+		"pg": "^7.11.0"
+	},
+	"devDependencies": {
+		"@types/pg": "^7.4.14",
+		"typescript": "^3.5.3"
+	}
+}
